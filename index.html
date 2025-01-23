@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive HTML Table Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Responsive HTML Table Generator</h1>
+        <p>Create fully customizable and responsive HTML tables with ease!</p>
+    </header>
+
+    <section>
+        <h2>Customize Your Table</h2>
+        <div class="form-group">
+            <label for="rows">Number of Rows:</label>
+            <input type="number" id="rows" min="1" value="3">
+        </div>
+        <div class="form-group">
+            <label for="columns">Number of Columns:</label>
+            <input type="number" id="columns" min="1" value="3">
+        </div>
+        <div class="form-group">
+            <label for="border-style">Table Border Style:</label>
+            <select id="border-style">
+                <option value="solid">Solid</option>
+                <option value="dashed">Dashed</option>
+                <option value="dotted">Dotted</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="cell-padding">Cell Padding:</label>
+            <input type="number" id="cell-padding" min="0" value="20">
+        </div>
+        <div class="form-group">
+            <label for="cell-spacing">Cell Spacing:</label>
+            <input type="number" id="cell-spacing" min="0" value="2">
+        </div>
+        <div class="form-group">
+            <label for="table-width">Table Width (px or %):</label>
+            <input type="text" id="table-width" value="100%">
+        </div>
+        <div class="form-group">
+            <label for="table-height">Table Height (px or %):</label>
+            <input type="text" id="table-height" value="auto">
+        </div>
+        <div class="form-group">
+            <label for="bg-color">Background Color:</label>
+            <input type="color" id="bg-color" value="#ffffff">
+        </div>
+        <div class="form-group">
+            <label for="text-color">Text Color:</label>
+            <input type="color" id="text-color" value="#000000">
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="checkbox" id="header-row" checked>
+                Include Header Row
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="rowspan">Rowspan (applies to all cells):</label>
+            <input type="number" id="rowspan" min="1" value="1">
+        </div>
+        <div class="form-group">
+            <label for="colspan">Colspan (applies to all cells):</label>
+            <input type="number" id="colspan" min="1" value="1">
+        </div>
+        <div class="form-group">
+            <button id="generate">Generate Table</button>
+            <button id="reset">Reset</button>
+        </div>
+
+        <h2>Live Table Preview</h2>
+        <div id="table-preview" class="preview"></div>
+
+        <h2>Generated HTML Code</h2>
+        <textarea id="html-code" readonly></textarea>
+        <button id="copy">Copy to Clipboard</button>
+        <button id="export">Export as HTML File</button>
+    </section>
+
+    <footer>
+        <p class="animated-paragraph">&copy; 2025 Responsive HTML Table Generator. Developed by Suraj Kumar (STM)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
